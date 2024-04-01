@@ -109,6 +109,10 @@ class IVFBase {
             Tensor<idx_t, 2, true>& outIndices,
             bool storePairs) = 0;
 
+    /// Device representation of all inverted list data
+    /// id -> data
+    DeviceVector<void*> deviceListDataPointers_;
+
    protected:
     /// Adds a set of codes and indices to a list, with the representation
     /// coming from the CPU equivalent
@@ -227,10 +231,6 @@ class IVFBase {
 
     /// What memory space our inverted list storage is in
     const MemorySpace space_;
-
-    /// Device representation of all inverted list data
-    /// id -> data
-    DeviceVector<void*> deviceListDataPointers_;
 
     /// Device representation of all inverted list index pointers
     /// id -> data

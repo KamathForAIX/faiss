@@ -356,5 +356,49 @@ void GpuIndexIVFFlat::setIndex_(
     }
 }
 
+void GpuIndexIVFFlat::reconstruct_n(idx_t i0, idx_t ni, float* out) const {
+    DeviceScope scope(config_.device);
+    FAISS_ASSERT(baseIndex_);
+
+    if (ni == 0) {
+        // nothing to do
+        return;
+    }
+
+    FAISS_THROW_IF_NOT_FMT(
+            i0 < this->ntotal,
+            "start index (%zu) out of bounds (ntotal %zu)",
+            i0,
+            this->ntotal);
+    FAISS_THROW_IF_NOT_FMT(
+            i0 + ni - 1 < this->ntotal,
+            "max index requested (%zu) out of bounds (ntotal %zu)",
+            i0 + ni - 1,
+            this->ntotal);
+
+    auto stream = resources_->getDefaultStream(config_.device);
+
+    auto dim = baseIndex_->getDim();
+
+    for (idx_t list_no = 0; list_no < this->getNumLists(); list_no++) {
+        size_t list_size = this->getListLength(list_no);
+
+        auto idlist = this->getListIndices(list_no);
+
+        for (idx_t offset = 0; offset < list_size; offset++) {
+            idx_t id = idlist[offset];
+            if (!(id > i0 && id < i0 + ni)) {
+                continue;
+            }
+
+            auto listDataPtr = (float*)index_->deviceListDataPointers_.getAt(
+                                       list_no, stream) +
+                    offset * dim;
+
+            fromDevice<float>(listDataPtr, out + (id - i0) * dim, dim, stream);
+        }
+    }
+}
+
 } // namespace gpu
 } // namespace faiss

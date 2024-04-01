@@ -842,6 +842,46 @@ TEST(TestGpuIndexIVFFlat, LongIVFList) {
 #endif
 }
 
+TEST(TestGpuIndexIVFFlat, RECONSTRUCT) {
+    Options opt;
+
+    std::vector<float> trainVecs = faiss::gpu::randVecs(opt.numTrain, opt.dim);
+    std::vector<float> addVecs = faiss::gpu::randVecs(opt.numAdd, opt.dim);
+
+    faiss::IndexFlatL2 cpuQuantizer(opt.dim);
+    faiss::IndexIVFFlat cpuIndex(
+            &cpuQuantizer, opt.dim, opt.numCentroids, faiss::METRIC_L2);
+    cpuIndex.nprobe = opt.nprobe;
+    cpuIndex.train(opt.numTrain, trainVecs.data());
+    cpuIndex.add(opt.numAdd, addVecs.data());
+
+    faiss::gpu::StandardGpuResources res;
+    res.noTempMemory();
+
+    faiss::gpu::GpuIndexIVFFlatConfig config;
+    config.device = opt.device;
+    config.indicesOptions = opt.indicesOpt;
+    config.flatConfig.useFloat16 = faiss::gpu::randBool();
+    config.use_raft = false;
+
+    faiss::gpu::GpuIndexIVFFlat gpuIndex(
+            &res, opt.dim, opt.numCentroids, faiss::METRIC_L2, config);
+    gpuIndex.nprobe = opt.nprobe;
+
+    gpuIndex.train(opt.numTrain, trainVecs.data());
+    gpuIndex.add(opt.numAdd, addVecs.data());
+
+    std::vector<float> gpuVals(opt.numAdd * opt.dim);
+
+    gpuIndex.reconstruct_n(0, gpuIndex.ntotal, gpuVals.data());
+
+    std::vector<float> cpuVals(opt.numAdd * opt.dim);
+
+    cpuIndex.reconstruct_n(0, cpuIndex.ntotal, cpuVals.data());
+
+    EXPECT_EQ(gpuVals, addVecs);
+}
+
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
 
