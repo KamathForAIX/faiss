@@ -55,8 +55,13 @@ void pq4_pack_codes(
     FAISS_THROW_IF_NOT(nsq % 2 == 0);
 
     memset(blocks, 0, nb * nsq / 2);
+#if (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)
+    const uint8_t perm0[16] = {
+            8, 0, 9, 1, 10, 2, 11, 3, 12, 4, 13, 5, 14, 6, 15, 7};
+#else
     const uint8_t perm0[16] = {
             0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15};
+#endif
 
     uint8_t* codes2 = blocks;
     for (size_t i0 = 0; i0 < nb; i0 += bbs) {
@@ -90,8 +95,13 @@ void pq4_pack_codes_range(
         size_t bbs,
         size_t nsq,
         uint8_t* blocks) {
+#if (__BYTE_ORDER__ == __ORDER_BIG_ENDIAN__)
+    const uint8_t perm0[16] = {
+            8, 0, 9, 1, 10, 2, 11, 3, 12, 4, 13, 5, 14, 6, 15, 7};
+#else
     const uint8_t perm0[16] = {
             0, 8, 1, 9, 2, 10, 3, 11, 4, 12, 5, 13, 6, 14, 7, 15};
+#endif
 
     // range of affected blocks
     size_t block0 = i0 / bbs;

@@ -261,6 +261,10 @@ if(WIN32)
 endif()
 
 target_compile_definitions(faiss PRIVATE FINTEGER=int)
+string(FIND "${CMAKE_CXX_FLAGS}" "FINTEGER" finteger_idx)
+if (${finteger_idx} EQUAL -1)
+  target_compile_definitions(faiss PRIVATE FINTEGER=int)
+endif()
 target_compile_definitions(faiss_avx2 PRIVATE FINTEGER=int)
 
 find_package(OpenMP REQUIRED)
