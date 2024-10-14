@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File IVFlib.h &mdash; Faiss  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
     <link rel="canonical" href="https://faiss.ai/cpp_api/file/IVFlib_8h.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -242,14 +239,15 @@
 <li class="toctree-l2"><a class="reference internal" href="bf16_8h.html">File bf16.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clone__index_8h.html">File clone_index.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-avx2_8h.html">File code_distance-avx2.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code__distance-avx512_8h.html">File code_distance-avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-generic_8h.html">File code_distance-generic.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance_8h.html">File code_distance.h</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code__distance__avx512_8h.html">File code_distance_avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_8h.html">File common.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances_8h.html">File distances.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances__fused_8h.html">File distances_fused.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances-inl_8h.html">File extra_distances-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances_8h.html">File extra_distances.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="factory__tools_8h.html">File factory_tools.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-arm_8h.html">File fp16-arm.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-fp16c_8h.html">File fp16-fp16c.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-inl_8h.html">File fp16-inl.h</a></li>
@@ -262,6 +260,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hamming__distance_2avx2-inl_8h.html">File avx2-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__factory_8h.html">File index_factory.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__io_8h.html">File index_io.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index__read__utils_8h.html">File index_read_utils.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io_8h.html">File io.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io__macros_8h.html">File io_macros.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kmeans1d_8h.html">File kmeans1d.h</a></li>
@@ -287,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="simdlib__ppc64_8h.html">File simdlib_ppc64.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting_8h.html">File sorting.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transpose-avx2-inl_8h.html">File transpose-avx2-inl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transpose-avx512-inl_8h.html">File transpose-avx512-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils_8h.html">File utils.h</a></li>
 </ul>
 </li>
@@ -365,25 +365,25 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss6ivflib17extract_index_ivfEPK5Index">
-<span id="_CPPv3N5faiss6ivflib17extract_index_ivfEPK5Index"></span><span id="_CPPv2N5faiss6ivflib17extract_index_ivfEPK5Index"></span><span id="faiss::ivflib::extract_index_ivf__IndexCP"></span><span class="target" id="IVFlib_8h_1a55cc82273e73c80efee882296b1e1e7e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">extract_index_ivf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib17extract_index_ivfEPK5Index" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5faiss6ivflib17extract_index_ivfEPK5Index"></span><span id="_CPPv2N5faiss6ivflib17extract_index_ivfEPK5Index"></span><span id="faiss::ivflib::extract_index_ivf__IndexCP"></span><span class="target" id="IVFlib_8h_1a73c11c3c801b554a6fe55545b5a68aff"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">extract_index_ivf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib17extract_index_ivfEPK5Index" title="Permalink to this definition"></a><br /></dt>
 <dd><p>get an <a class="reference internal" href="../struct/structfaiss_1_1IndexIVF.html#structfaiss_1_1IndexIVF"><span class="std std-ref">IndexIVF</span></a> from an index. The index may be an <a class="reference internal" href="../struct/structfaiss_1_1IndexIVF.html#structfaiss_1_1IndexIVF"><span class="std std-ref">IndexIVF</span></a> or some wrapper class that encloses an <a class="reference internal" href="../struct/structfaiss_1_1IndexIVF.html#structfaiss_1_1IndexIVF"><span class="std std-ref">IndexIVF</span></a></p>
 <p>throws an exception if this is not the case. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss6ivflib17extract_index_ivfEP5Index">
-<span id="_CPPv3N5faiss6ivflib17extract_index_ivfEP5Index"></span><span id="_CPPv2N5faiss6ivflib17extract_index_ivfEP5Index"></span><span id="faiss::ivflib::extract_index_ivf__IndexP"></span><span class="target" id="IVFlib_8h_1a99619f17a07b9a29193d1c796a390b54"></span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">extract_index_ivf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib17extract_index_ivfEP5Index" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5faiss6ivflib17extract_index_ivfEP5Index"></span><span id="_CPPv2N5faiss6ivflib17extract_index_ivfEP5Index"></span><span id="faiss::ivflib::extract_index_ivf__IndexP"></span><span class="target" id="IVFlib_8h_1ac7a58bb019c8164221457029cd69bed0"></span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">extract_index_ivf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib17extract_index_ivfEP5Index" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss6ivflib21try_extract_index_ivfEPK5Index">
-<span id="_CPPv3N5faiss6ivflib21try_extract_index_ivfEPK5Index"></span><span id="_CPPv2N5faiss6ivflib21try_extract_index_ivfEPK5Index"></span><span id="faiss::ivflib::try_extract_index_ivf__IndexCP"></span><span class="target" id="IVFlib_8h_1a6fff1114be38812ecd9a5afa41f7c329"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">try_extract_index_ivf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib21try_extract_index_ivfEPK5Index" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5faiss6ivflib21try_extract_index_ivfEPK5Index"></span><span id="_CPPv2N5faiss6ivflib21try_extract_index_ivfEPK5Index"></span><span id="faiss::ivflib::try_extract_index_ivf__IndexCP"></span><span class="target" id="IVFlib_8h_1adc6fd964bb0944b737b79875a74788e5"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">try_extract_index_ivf</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib21try_extract_index_ivfEPK5Index" title="Permalink to this definition"></a><br /></dt>
 <dd><p>same as above but returns nullptr instead of throwing on failure </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss6ivflib21try_extract_index_ivfEP5Index">
-<span id="_CPPv3N5faiss6ivflib21try_extract_index_ivfEP5Index"></span><span id="_CPPv2N5faiss6ivflib21try_extract_index_ivfEP5Index"></span><span id="faiss::ivflib::try_extract_index_ivf__IndexP"></span><span class="target" id="IVFlib_8h_1a5905b16993db13ef518648936e63b251"></span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">try_extract_index_ivf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib21try_extract_index_ivfEP5Index" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5faiss6ivflib21try_extract_index_ivfEP5Index"></span><span id="_CPPv2N5faiss6ivflib21try_extract_index_ivfEP5Index"></span><span id="faiss::ivflib::try_extract_index_ivf__IndexP"></span><span class="target" id="IVFlib_8h_1ac7ceabdf2f0c1f41039c42c032691473"></span><a class="reference internal" href="IndexIVF_8h.html#_CPPv4N5faiss8IndexIVFE" title="faiss::IndexIVF"><span class="n"><span class="pre">IndexIVF</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">try_extract_index_ivf</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib21try_extract_index_ivfEP5Index" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -409,7 +409,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss6ivflib17get_invlist_rangeEPK5Indexll">
-<span id="_CPPv3N5faiss6ivflib17get_invlist_rangeEPK5Indexll"></span><span id="_CPPv2N5faiss6ivflib17get_invlist_rangeEPK5Indexll"></span><span id="faiss::ivflib::get_invlist_range__IndexCP.l.l"></span><span class="target" id="IVFlib_8h_1aaa9a8f346bd0ff551667de679f231bf6"></span><a class="reference internal" href="InvertedLists_8h.html#_CPPv4N5faiss18ArrayInvertedListsE" title="faiss::ArrayInvertedLists"><span class="n"><span class="pre">ArrayInvertedLists</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_invlist_range</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i0</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib17get_invlist_rangeEPK5Indexll" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5faiss6ivflib17get_invlist_rangeEPK5Indexll"></span><span id="_CPPv2N5faiss6ivflib17get_invlist_rangeEPK5Indexll"></span><span id="faiss::ivflib::get_invlist_range__IndexCP.l.l"></span><span class="target" id="IVFlib_8h_1a28aac05f31a5d8301f24dd599c5c204b"></span><a class="reference internal" href="InvertedLists_8h.html#_CPPv4N5faiss18ArrayInvertedListsE" title="faiss::ArrayInvertedLists"><span class="n"><span class="pre">ArrayInvertedLists</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_invlist_range</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">index</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i0</span></span>, <span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib17get_invlist_rangeEPK5Indexll" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get a subset of inverted lists [i0, i1) </p>
 </dd></dl>
 
@@ -438,7 +438,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri">
-<span id="_CPPv3N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri"></span><span id="_CPPv2N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri"></span><span id="faiss::ivflib::ivf_residual_from_quantizer__ResidualQuantizerCR.i"></span><span class="target" id="IVFlib_8h_1a610ba9a58aa5861814109df57fb0aef7"></span><a class="reference internal" href="IndexIVFAdditiveQuantizer_8h.html#_CPPv4N5faiss25IndexIVFResidualQuantizerE" title="faiss::IndexIVFResidualQuantizer"><span class="n"><span class="pre">IndexIVFResidualQuantizer</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ivf_residual_from_quantizer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="ResidualQuantizer_8h.html#_CPPv4N5faiss17ResidualQuantizerE" title="faiss::ResidualQuantizer"><span class="n"><span class="pre">ResidualQuantizer</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nlevel</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri"></span><span id="_CPPv2N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri"></span><span id="faiss::ivflib::ivf_residual_from_quantizer__ResidualQuantizerCR.i"></span><span class="target" id="IVFlib_8h_1ad4e104b5a77c21bda47ea76cb1896ecd"></span><a class="reference internal" href="IndexIVFAdditiveQuantizer_8h.html#_CPPv4N5faiss25IndexIVFResidualQuantizerE" title="faiss::IndexIVFResidualQuantizer"><span class="n"><span class="pre">IndexIVFResidualQuantizer</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ivf_residual_from_quantizer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="ResidualQuantizer_8h.html#_CPPv4N5faiss17ResidualQuantizerE" title="faiss::ResidualQuantizer"><span class="n"><span class="pre">ResidualQuantizer</span></span></a><span class="p"><span class="pre">&amp;</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nlevel</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss6ivflib27ivf_residual_from_quantizerERK17ResidualQuantizeri" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Build an <a class="reference internal" href="../struct/structfaiss_1_1IndexIVFResidualQuantizer.html#structfaiss_1_1IndexIVFResidualQuantizer"><span class="std std-ref">IndexIVFResidualQuantizer</span></a> from an <a class="reference internal" href="../struct/structfaiss_1_1ResidualQuantizer.html#structfaiss_1_1ResidualQuantizer"><span class="std std-ref">ResidualQuantizer</span></a>, using the nlevel first components as coarse quantizer and the rest as codes in invlists </p>
 </dd></dl>
 

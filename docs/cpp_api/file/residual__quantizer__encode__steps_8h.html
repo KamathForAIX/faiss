@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File residual_quantizer_encode_steps.h &mdash; Faiss  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
     <link rel="canonical" href="https://faiss.ai/cpp_api/file/residual__quantizer__encode__steps_8h.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -242,14 +239,15 @@
 <li class="toctree-l2"><a class="reference internal" href="bf16_8h.html">File bf16.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clone__index_8h.html">File clone_index.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-avx2_8h.html">File code_distance-avx2.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code__distance-avx512_8h.html">File code_distance-avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-generic_8h.html">File code_distance-generic.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance_8h.html">File code_distance.h</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code__distance__avx512_8h.html">File code_distance_avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_8h.html">File common.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances_8h.html">File distances.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances__fused_8h.html">File distances_fused.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances-inl_8h.html">File extra_distances-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances_8h.html">File extra_distances.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="factory__tools_8h.html">File factory_tools.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-arm_8h.html">File fp16-arm.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-fp16c_8h.html">File fp16-fp16c.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-inl_8h.html">File fp16-inl.h</a></li>
@@ -262,6 +260,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hamming__distance_2avx2-inl_8h.html">File avx2-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__factory_8h.html">File index_factory.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__io_8h.html">File index_io.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index__read__utils_8h.html">File index_read_utils.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io_8h.html">File io.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io__macros_8h.html">File io_macros.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kmeans1d_8h.html">File kmeans1d.h</a></li>
@@ -287,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="simdlib__ppc64_8h.html">File simdlib_ppc64.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting_8h.html">File sorting.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transpose-avx2-inl_8h.html">File transpose-avx2-inl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transpose-avx512-inl_8h.html">File transpose-avx512-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils_8h.html">File utils.h</a></li>
 </ul>
 </li>
@@ -362,7 +362,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n</strong> – number of vectors to hanlde </p></li>
+<li><p><strong>n</strong> – number of vectors to handle </p></li>
 <li><p><strong>residuals</strong> – vectors to encode, size (n, beam_size, d) </p></li>
 <li><p><strong>cent</strong> – centroids, size (K, d) </p></li>
 <li><p><strong>beam_size</strong> – input beam size </p></li>
@@ -424,67 +424,6 @@
 <dd></dd></dl>
 
 </div>
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPoolE">
-<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPoolE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPoolE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RefineBeamMemoryPool</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPoolE" title="Permalink to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE">
-<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::new_codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1abe4edc133235749c6fa9242027614b92"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE">
-<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::new_residuals__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a18c98526d39b5f70a05be2aa56bab86c"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_residuals</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE">
-<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::residuals__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a948c9bf805df111ba78e2194d490e1e2"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">residuals</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE">
-<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a03a42ed86563dbd69e11a036c116c1d2"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE">
-<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::distances__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a9e62e31d59298921f79b8f7b96363633"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distances</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE">
-<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RefineBeamLUTMemoryPool</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE" title="Permalink to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE">
-<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::new_codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1ab0832c6ec89568ade16f6f6c1a1f05f5"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE">
-<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::new_distances__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1ae0dc4b3e8df9adf2058deb7baa215ea6"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_distances</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE">
-<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1acd177fce42538ae6039eb47631440491"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE">
-<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::distances__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1a3f0d27d49ac0ba3b83cc4a0f711d320b"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distances</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT0MemoryPoolE">
 <span id="_CPPv3N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT0MemoryPoolE"></span><span id="_CPPv2N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT0MemoryPoolE"></span><span id="faiss::rq_encode_steps::ComputeCodesAddCentroidsLUT0MemoryPool"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1ComputeCodesAddCentroidsLUT0MemoryPool"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeCodesAddCentroidsLUT0MemoryPool</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT0MemoryPoolE" title="Permalink to this definition"></a><br /></dt>
@@ -551,6 +490,67 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT1MemoryPool20refine_beam_lut_poolE">
 <span id="_CPPv3N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT1MemoryPool20refine_beam_lut_poolE"></span><span id="_CPPv2N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT1MemoryPool20refine_beam_lut_poolE"></span><span id="faiss::rq_encode_steps::ComputeCodesAddCentroidsLUT1MemoryPool::refine_beam_lut_pool__RefineBeamLUTMemoryPool"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1ComputeCodesAddCentroidsLUT1MemoryPool_1a2c8e4f9d0554e4374c63152d9d8114f9"></span><a class="reference internal" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE" title="faiss::rq_encode_steps::RefineBeamLUTMemoryPool"><span class="n"><span class="pre">RefineBeamLUTMemoryPool</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">refine_beam_lut_pool</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps38ComputeCodesAddCentroidsLUT1MemoryPool20refine_beam_lut_poolE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE">
+<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RefineBeamLUTMemoryPool</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPoolE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE">
+<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::new_codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1ab0832c6ec89568ade16f6f6c1a1f05f5"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9new_codesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE">
+<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::new_distances__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1ae0dc4b3e8df9adf2058deb7baa215ea6"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_distances</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool13new_distancesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE">
+<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1acd177fce42538ae6039eb47631440491"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool5codesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE">
+<span id="_CPPv3N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE"></span><span id="_CPPv2N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE"></span><span id="faiss::rq_encode_steps::RefineBeamLUTMemoryPool::distances__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamLUTMemoryPool_1a3f0d27d49ac0ba3b83cc4a0f711d320b"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distances</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps23RefineBeamLUTMemoryPool9distancesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPoolE">
+<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPoolE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPoolE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RefineBeamMemoryPool</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPoolE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE">
+<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::new_codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1abe4edc133235749c6fa9242027614b92"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9new_codesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE">
+<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::new_residuals__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a18c98526d39b5f70a05be2aa56bab86c"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_residuals</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool13new_residualsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE">
+<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::residuals__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a948c9bf805df111ba78e2194d490e1e2"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">residuals</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9residualsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE">
+<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::codes__std::vector:int32_t:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a03a42ed86563dbd69e11a036c116c1d2"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int32_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">codes</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool5codesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE">
+<span id="_CPPv3N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE"></span><span id="_CPPv2N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE"></span><span id="faiss::rq_encode_steps::RefineBeamMemoryPool::distances__std::vector:float:"></span><span class="target" id="structfaiss_1_1rq__encode__steps_1_1RefineBeamMemoryPool_1a9e62e31d59298921f79b8f7b96363633"></span><a class="reference internal" href="../namespace/namespacestd.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distances</span></span></span><a class="headerlink" href="#_CPPv4N5faiss15rq_encode_steps20RefineBeamMemoryPool9distancesE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>

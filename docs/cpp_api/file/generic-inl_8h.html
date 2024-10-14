@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File generic-inl.h &mdash; Faiss  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
     <link rel="canonical" href="https://faiss.ai/cpp_api/file/generic-inl_8h.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -242,14 +239,15 @@
 <li class="toctree-l2"><a class="reference internal" href="bf16_8h.html">File bf16.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clone__index_8h.html">File clone_index.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-avx2_8h.html">File code_distance-avx2.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code__distance-avx512_8h.html">File code_distance-avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-generic_8h.html">File code_distance-generic.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance_8h.html">File code_distance.h</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code__distance__avx512_8h.html">File code_distance_avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_8h.html">File common.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances_8h.html">File distances.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances__fused_8h.html">File distances_fused.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances-inl_8h.html">File extra_distances-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances_8h.html">File extra_distances.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="factory__tools_8h.html">File factory_tools.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-arm_8h.html">File fp16-arm.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-fp16c_8h.html">File fp16-fp16c.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-inl_8h.html">File fp16-inl.h</a></li>
@@ -262,6 +260,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hamming__distance_2avx2-inl_8h.html">File avx2-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__factory_8h.html">File index_factory.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__io_8h.html">File index_io.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index__read__utils_8h.html">File index_read_utils.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io_8h.html">File io.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io__macros_8h.html">File io_macros.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kmeans1d_8h.html">File kmeans1d.h</a></li>
@@ -287,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="simdlib__ppc64_8h.html">File simdlib_ppc64.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting_8h.html">File sorting.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transpose-avx2-inl_8h.html">File transpose-avx2-inl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transpose-avx512-inl_8h.html">File transpose-avx512-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils_8h.html">File utils.h</a></li>
 </ul>
 </li>
@@ -352,14 +352,42 @@
 <p>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree. Implements a few neural net layers, mainly to support <a class="reference internal" href="../struct/structfaiss_1_1QINCo.html#structfaiss_1_1QINCo"><span class="std std-ref">QINCo</span></a></p>
 <p>Copyright (c) Facebook, Inc. and its affiliates.</p>
 <p>This source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree. Defines a few objects that apply transformations to a set of vectors Often these are pre-processing steps. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IEN5faiss7hammingIXL64EEEE8hamdis_tPK8uint64_tPK8uint64_t">
+<span id="_CPPv3IEN5faiss7hammingIXL64EEEEPK8uint64_tPK8uint64_t"></span><span id="_CPPv2IEN5faiss7hammingIX64EEEPK8uint64_tPK8uint64_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacefaiss_1a020c4142c2661fa5387255c73e1b3510"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="common_8h.html#_CPPv48hamdis_t" title="hamdis_t"><span class="n"><span class="pre">hamdis_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hamming</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="m"><span class="pre">64</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pa</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IEN5faiss7hammingIXL64EEEE8hamdis_tPK8uint64_tPK8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IEN5faiss7hammingIXL128EEEE8hamdis_tPK8uint64_tPK8uint64_t">
+<span id="_CPPv3IEN5faiss7hammingIXL128EEEEPK8uint64_tPK8uint64_t"></span><span id="_CPPv2IEN5faiss7hammingIX128EEEPK8uint64_tPK8uint64_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacefaiss_1a251cd1d86f57ca5499d939d3f5ae093e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="common_8h.html#_CPPv48hamdis_t" title="hamdis_t"><span class="n"><span class="pre">hamdis_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hamming</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="m"><span class="pre">128</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pa</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IEN5faiss7hammingIXL128EEEE8hamdis_tPK8uint64_tPK8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IEN5faiss7hammingIXL256EEEE8hamdis_tPK8uint64_tPK8uint64_t">
+<span id="_CPPv3IEN5faiss7hammingIXL256EEEEPK8uint64_tPK8uint64_t"></span><span id="_CPPv2IEN5faiss7hammingIX256EEEPK8uint64_tPK8uint64_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacefaiss_1a8d4176559a9c361225a047c03f62d648"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="common_8h.html#_CPPv48hamdis_t" title="hamdis_t"><span class="n"><span class="pre">hamdis_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hamming</span></span></span><span class="p"><span class="pre">&lt;</span></span><span class="m"><span class="pre">256</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pa</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IEN5faiss7hammingIXL256EEEE8hamdis_tPK8uint64_tPK8uint64_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
 <dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss16HammingComputer4E">
-<span id="_CPPv3N5faiss16HammingComputer4E"></span><span id="_CPPv2N5faiss16HammingComputer4E"></span><span id="faiss::HammingComputer4"></span><span class="target" id="structfaiss_1_1HammingComputer4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HammingComputer4</span></span></span><a class="headerlink" href="#_CPPv4N5faiss16HammingComputer4E" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss20GenHammingComputer16E">
+<span id="_CPPv3N5faiss20GenHammingComputer16E"></span><span id="_CPPv2N5faiss20GenHammingComputer16E"></span><span id="faiss::GenHammingComputer16"></span><span class="target" id="structfaiss_1_1GenHammingComputer16"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputer16</span></span></span><a class="headerlink" href="#_CPPv4N5faiss20GenHammingComputer16E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss16HammingComputer8E">
-<span id="_CPPv3N5faiss16HammingComputer8E"></span><span id="_CPPv2N5faiss16HammingComputer8E"></span><span id="faiss::HammingComputer8"></span><span class="target" id="structfaiss_1_1HammingComputer8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HammingComputer8</span></span></span><a class="headerlink" href="#_CPPv4N5faiss16HammingComputer8E" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss20GenHammingComputer32E">
+<span id="_CPPv3N5faiss20GenHammingComputer32E"></span><span id="_CPPv2N5faiss20GenHammingComputer32E"></span><span id="faiss::GenHammingComputer32"></span><span class="target" id="structfaiss_1_1GenHammingComputer32"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputer32</span></span></span><a class="headerlink" href="#_CPPv4N5faiss20GenHammingComputer32E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss19GenHammingComputer8E">
+<span id="_CPPv3N5faiss19GenHammingComputer8E"></span><span id="_CPPv2N5faiss19GenHammingComputer8E"></span><span id="faiss::GenHammingComputer8"></span><span class="target" id="structfaiss_1_1GenHammingComputer8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputer8</span></span></span><a class="headerlink" href="#_CPPv4N5faiss19GenHammingComputer8E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss20GenHammingComputerM8E">
+<span id="_CPPv3N5faiss20GenHammingComputerM8E"></span><span id="_CPPv2N5faiss20GenHammingComputerM8E"></span><span id="faiss::GenHammingComputerM8"></span><span class="target" id="structfaiss_1_1GenHammingComputerM8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputerM8</span></span></span><a class="headerlink" href="#_CPPv4N5faiss20GenHammingComputerM8E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp struct">
@@ -378,33 +406,23 @@
 <dd></dd></dl>
 
 <dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss16HammingComputer4E">
+<span id="_CPPv3N5faiss16HammingComputer4E"></span><span id="_CPPv2N5faiss16HammingComputer4E"></span><span id="faiss::HammingComputer4"></span><span class="target" id="structfaiss_1_1HammingComputer4"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HammingComputer4</span></span></span><a class="headerlink" href="#_CPPv4N5faiss16HammingComputer4E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss17HammingComputer64E">
 <span id="_CPPv3N5faiss17HammingComputer64E"></span><span id="_CPPv2N5faiss17HammingComputer64E"></span><span id="faiss::HammingComputer64"></span><span class="target" id="structfaiss_1_1HammingComputer64"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HammingComputer64</span></span></span><a class="headerlink" href="#_CPPv4N5faiss17HammingComputer64E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss16HammingComputer8E">
+<span id="_CPPv3N5faiss16HammingComputer8E"></span><span id="_CPPv2N5faiss16HammingComputer8E"></span><span id="faiss::HammingComputer8"></span><span class="target" id="structfaiss_1_1HammingComputer8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HammingComputer8</span></span></span><a class="headerlink" href="#_CPPv4N5faiss16HammingComputer8E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss22HammingComputerDefaultE">
 <span id="_CPPv3N5faiss22HammingComputerDefaultE"></span><span id="_CPPv2N5faiss22HammingComputerDefaultE"></span><span id="faiss::HammingComputerDefault"></span><span class="target" id="structfaiss_1_1HammingComputerDefault"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HammingComputerDefault</span></span></span><a class="headerlink" href="#_CPPv4N5faiss22HammingComputerDefaultE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss19GenHammingComputer8E">
-<span id="_CPPv3N5faiss19GenHammingComputer8E"></span><span id="_CPPv2N5faiss19GenHammingComputer8E"></span><span id="faiss::GenHammingComputer8"></span><span class="target" id="structfaiss_1_1GenHammingComputer8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputer8</span></span></span><a class="headerlink" href="#_CPPv4N5faiss19GenHammingComputer8E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss20GenHammingComputer16E">
-<span id="_CPPv3N5faiss20GenHammingComputer16E"></span><span id="_CPPv2N5faiss20GenHammingComputer16E"></span><span id="faiss::GenHammingComputer16"></span><span class="target" id="structfaiss_1_1GenHammingComputer16"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputer16</span></span></span><a class="headerlink" href="#_CPPv4N5faiss20GenHammingComputer16E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss20GenHammingComputer32E">
-<span id="_CPPv3N5faiss20GenHammingComputer32E"></span><span id="_CPPv2N5faiss20GenHammingComputer32E"></span><span id="faiss::GenHammingComputer32"></span><span class="target" id="structfaiss_1_1GenHammingComputer32"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputer32</span></span></span><a class="headerlink" href="#_CPPv4N5faiss20GenHammingComputer32E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss20GenHammingComputerM8E">
-<span id="_CPPv3N5faiss20GenHammingComputerM8E"></span><span id="_CPPv2N5faiss20GenHammingComputerM8E"></span><span id="faiss::GenHammingComputerM8"></span><span class="target" id="structfaiss_1_1GenHammingComputerM8"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenHammingComputerM8</span></span></span><a class="headerlink" href="#_CPPv4N5faiss20GenHammingComputerM8E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>

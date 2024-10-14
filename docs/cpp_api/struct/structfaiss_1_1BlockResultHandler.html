@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Struct faiss::BlockResultHandler &mdash; Faiss  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
     <link rel="canonical" href="https://faiss.ai/cpp_api/struct/structfaiss_1_1BlockResultHandler.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -313,6 +310,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1SimulatedAnnealingOptimizer.html">Struct faiss::SimulatedAnnealingOptimizer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1SimulatedAnnealingParameters.html">Struct faiss::SimulatedAnnealingParameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1SliceInvertedLists.html">Struct faiss::SliceInvertedLists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1SplitMix64RandomGenerator.html">Struct faiss::SplitMix64RandomGenerator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1StopWordsInvertedLists.html">Struct faiss::StopWordsInvertedLists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1TimeoutCallback.html">Struct faiss::TimeoutCallback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structfaiss_1_1Top1BlockResultHandler.html">Struct faiss::Top1BlockResultHandler</a></li>
@@ -435,7 +433,8 @@
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4I0_bEN5faiss18BlockResultHandlerE">
 <span id="_CPPv3I0_bEN5faiss18BlockResultHandlerE"></span><span id="_CPPv2I0_bEN5faiss18BlockResultHandlerE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_sel</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structfaiss_1_1BlockResultHandler"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BlockResultHandler</span></span></span><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>Subclassed by <a class="reference internal" href="structfaiss_1_1HeapBlockResultHandler.html#structfaiss_1_1HeapBlockResultHandler"><span class="std std-ref">faiss::HeapBlockResultHandler&lt; C, use_sel &gt;</span></a>, <a class="reference internal" href="structfaiss_1_1RangeSearchBlockResultHandler.html#structfaiss_1_1RangeSearchBlockResultHandler"><span class="std std-ref">faiss::RangeSearchBlockResultHandler&lt; C, use_sel &gt;</span></a>, <a class="reference internal" href="structfaiss_1_1ReservoirBlockResultHandler.html#structfaiss_1_1ReservoirBlockResultHandler"><span class="std std-ref">faiss::ReservoirBlockResultHandler&lt; C, use_sel &gt;</span></a>, <a class="reference internal" href="structfaiss_1_1Top1BlockResultHandler.html#structfaiss_1_1Top1BlockResultHandler"><span class="std std-ref">faiss::Top1BlockResultHandler&lt; C, use_sel &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss18BlockResultHandler18BlockResultHandlerE6size_tPK10IDSelector">

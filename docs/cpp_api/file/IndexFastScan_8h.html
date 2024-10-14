@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
@@ -6,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File IndexFastScan.h &mdash; Faiss  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
     <link rel="canonical" href="https://faiss.ai/cpp_api/file/IndexFastScan_8h.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -242,14 +239,15 @@
 <li class="toctree-l2"><a class="reference internal" href="bf16_8h.html">File bf16.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="clone__index_8h.html">File clone_index.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-avx2_8h.html">File code_distance-avx2.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code__distance-avx512_8h.html">File code_distance-avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance-generic_8h.html">File code_distance-generic.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code__distance_8h.html">File code_distance.h</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code__distance__avx512_8h.html">File code_distance_avx512.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="common_8h.html">File common.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances_8h.html">File distances.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distances__fused_8h.html">File distances_fused.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances-inl_8h.html">File extra_distances-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extra__distances_8h.html">File extra_distances.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="factory__tools_8h.html">File factory_tools.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-arm_8h.html">File fp16-arm.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-fp16c_8h.html">File fp16-fp16c.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fp16-inl_8h.html">File fp16-inl.h</a></li>
@@ -262,6 +260,7 @@
 <li class="toctree-l2"><a class="reference internal" href="hamming__distance_2avx2-inl_8h.html">File avx2-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__factory_8h.html">File index_factory.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index__io_8h.html">File index_io.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index__read__utils_8h.html">File index_read_utils.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io_8h.html">File io.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="io__macros_8h.html">File io_macros.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="kmeans1d_8h.html">File kmeans1d.h</a></li>
@@ -287,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="simdlib__ppc64_8h.html">File simdlib_ppc64.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sorting_8h.html">File sorting.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="transpose-avx2-inl_8h.html">File transpose-avx2-inl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transpose-avx512-inl_8h.html">File transpose-avx512-inl.h</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils_8h.html">File utils.h</a></li>
 </ul>
 </li>
@@ -360,6 +360,47 @@
 <dd></dd></dl>
 
 </div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStatsE">
+<span id="_CPPv3N5faiss13FastScanStatsE"></span><span id="_CPPv2N5faiss13FastScanStatsE"></span><span id="faiss::FastScanStats"></span><span class="target" id="structfaiss_1_1FastScanStats"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FastScanStats</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStatsE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats13FastScanStatsEv">
+<span id="_CPPv3N5faiss13FastScanStats13FastScanStatsEv"></span><span id="_CPPv2N5faiss13FastScanStats13FastScanStatsEv"></span><span id="faiss::FastScanStats::FastScanStats"></span><span class="target" id="structfaiss_1_1FastScanStats_1ab303350e82dfae5997cf983a812ca047"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FastScanStats</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats13FastScanStatsEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats5resetEv">
+<span id="_CPPv3N5faiss13FastScanStats5resetEv"></span><span id="_CPPv2N5faiss13FastScanStats5resetEv"></span><span id="faiss::FastScanStats::reset"></span><span class="target" id="structfaiss_1_1FastScanStats_1a315a2f1fa6e11eaf0d83d1ab2e120488"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats5resetEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t0E">
+<span id="_CPPv3N5faiss13FastScanStats2t0E"></span><span id="_CPPv2N5faiss13FastScanStats2t0E"></span><span id="faiss::FastScanStats::t0__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1a1607aa1a69e14d01c3ccf4fa5c8386ba"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t0</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t0E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t1E">
+<span id="_CPPv3N5faiss13FastScanStats2t1E"></span><span id="_CPPv2N5faiss13FastScanStats2t1E"></span><span id="faiss::FastScanStats::t1__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1aec18bb033b894ba2e8e937729053d49f"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t1</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t1E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t2E">
+<span id="_CPPv3N5faiss13FastScanStats2t2E"></span><span id="_CPPv2N5faiss13FastScanStats2t2E"></span><span id="faiss::FastScanStats::t2__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1ab16fac6fe52640c4ce83e7ef1f620168"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t2</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t2E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t3E">
+<span id="_CPPv3N5faiss13FastScanStats2t3E"></span><span id="_CPPv2N5faiss13FastScanStats2t3E"></span><span id="faiss::FastScanStats::t3__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1a3249472f188df34ffba850d9fb36ca7f"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t3</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t3E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss13IndexFastScanE">
 <span id="_CPPv3N5faiss13IndexFastScanE"></span><span id="_CPPv2N5faiss13IndexFastScanE"></span><span id="faiss::IndexFastScan"></span><span class="target" id="structfaiss_1_1IndexFastScan"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IndexFastScan</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="AdditiveQuantizer_8h.html#_CPPv45faiss" title="faiss"><span class="n"><span class="pre">faiss</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="Index_8h.html#_CPPv4N5faiss5IndexE" title="faiss::Index"><span class="n"><span class="pre">Index</span></span></a><a class="headerlink" href="#_CPPv4N5faiss13IndexFastScanE" title="Permalink to this definition"></a><br /></dt>
@@ -478,7 +519,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK5faiss13IndexFastScan14get_CodePackerEv">
-<span id="_CPPv3NK5faiss13IndexFastScan14get_CodePackerEv"></span><span id="_CPPv2NK5faiss13IndexFastScan14get_CodePackerEv"></span><span id="faiss::IndexFastScan::get_CodePackerC"></span><span class="target" id="structfaiss_1_1IndexFastScan_1a258779c8cd073c2e9a2b3c01301cf272"></span><a class="reference internal" href="CodePacker_8h.html#_CPPv4N5faiss10CodePackerE" title="faiss::CodePacker"><span class="n"><span class="pre">CodePacker</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_CodePacker</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5faiss13IndexFastScan14get_CodePackerEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK5faiss13IndexFastScan14get_CodePackerEv"></span><span id="_CPPv2NK5faiss13IndexFastScan14get_CodePackerEv"></span><span id="faiss::IndexFastScan::get_CodePackerC"></span><span class="target" id="structfaiss_1_1IndexFastScan_1ae55ba7a115a6850a6688390c68f74be9"></span><a class="reference internal" href="CodePacker_8h.html#_CPPv4N5faiss10CodePackerE" title="faiss::CodePacker"><span class="n"><span class="pre">CodePacker</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_CodePacker</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK5faiss13IndexFastScan14get_CodePackerEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -554,47 +595,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5faiss13IndexFastScan10orig_codesE">
 <span id="_CPPv3N5faiss13IndexFastScan10orig_codesE"></span><span id="_CPPv2N5faiss13IndexFastScan10orig_codesE"></span><span id="faiss::IndexFastScan::orig_codes__uint8_tCP"></span><span class="target" id="structfaiss_1_1IndexFastScan_1ad4125c84c2558b544ec12bb618dc2175"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">orig_codes</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N5faiss13IndexFastScan10orig_codesE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStatsE">
-<span id="_CPPv3N5faiss13FastScanStatsE"></span><span id="_CPPv2N5faiss13FastScanStatsE"></span><span id="faiss::FastScanStats"></span><span class="target" id="structfaiss_1_1FastScanStats"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FastScanStats</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStatsE" title="Permalink to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats13FastScanStatsEv">
-<span id="_CPPv3N5faiss13FastScanStats13FastScanStatsEv"></span><span id="_CPPv2N5faiss13FastScanStats13FastScanStatsEv"></span><span id="faiss::FastScanStats::FastScanStats"></span><span class="target" id="structfaiss_1_1FastScanStats_1ab303350e82dfae5997cf983a812ca047"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FastScanStats</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats13FastScanStatsEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats5resetEv">
-<span id="_CPPv3N5faiss13FastScanStats5resetEv"></span><span id="_CPPv2N5faiss13FastScanStats5resetEv"></span><span id="faiss::FastScanStats::reset"></span><span class="target" id="structfaiss_1_1FastScanStats_1a315a2f1fa6e11eaf0d83d1ab2e120488"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats5resetEv" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t0E">
-<span id="_CPPv3N5faiss13FastScanStats2t0E"></span><span id="_CPPv2N5faiss13FastScanStats2t0E"></span><span id="faiss::FastScanStats::t0__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1a1607aa1a69e14d01c3ccf4fa5c8386ba"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t0</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t0E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t1E">
-<span id="_CPPv3N5faiss13FastScanStats2t1E"></span><span id="_CPPv2N5faiss13FastScanStats2t1E"></span><span id="faiss::FastScanStats::t1__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1aec18bb033b894ba2e8e937729053d49f"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t1</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t1E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t2E">
-<span id="_CPPv3N5faiss13FastScanStats2t2E"></span><span id="_CPPv2N5faiss13FastScanStats2t2E"></span><span id="faiss::FastScanStats::t2__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1ab16fac6fe52640c4ce83e7ef1f620168"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t2</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t2E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N5faiss13FastScanStats2t3E">
-<span id="_CPPv3N5faiss13FastScanStats2t3E"></span><span id="_CPPv2N5faiss13FastScanStats2t3E"></span><span id="faiss::FastScanStats::t3__uint64_t"></span><span class="target" id="structfaiss_1_1FastScanStats_1a3249472f188df34ffba850d9fb36ca7f"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t3</span></span></span><a class="headerlink" href="#_CPPv4N5faiss13FastScanStats2t3E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
