@@ -619,6 +619,8 @@
         <reimplementedby refid="structfaiss_1_1IndexIVFFastScan_1a1f8213db15661df4339ec9ce4e2244a9">range_search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVFFlatDedup_1a4a3599498e1c2d548836cc049056609e">range_search</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a5374e209bc7577e848577c1d21fb5260">range_search</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexRaBitQ_1a97da3c2d6eeba361a5af60a6a07e62e9">range_search</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexRefine_1a0b8e378d2a5f040f7c82e2ddcc1f27c0">range_search</reimplementedby>
         <param>
           <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
           <declname>n</declname>
@@ -1119,6 +1121,7 @@
         <reimplementedby refid="structfaiss_1_1Index2Layer_1ae148c7b7ab50a2d3859002b64572cb0f">get_distance_computer</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlatCodes_1ad1f46f8661b11c413c4ba66d842f35ed">get_distance_computer</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexHNSW_1af1f0080b012492ffcab261eaa25b1545">get_distance_computer</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexIVFRaBitQ_1ad3bf565bb0446e201db587c39b84176f">get_distance_computer</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a4e0180e2aa2aacaa2532660bdb4f9b8c">get_distance_computer</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -1136,6 +1139,7 @@
         <argsstring>() const</argsstring>
         <name>sa_code_size</name>
         <qualifiedname>faiss::Index::sa_code_size</qualifiedname>
+        <reimplementedby refid="structfaiss_1_1IndexFastScan_1a177e8f06f3ac7a6cc90cd0b817b97e58">sa_code_size</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlatCodes_1a7252bbbd4059cb1ea4b43e52eadc920a">sa_code_size</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVF_1a89b7f3a7b35db764bc071aa5ab302b1d">sa_code_size</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexLattice_1ac7c27786912bed039ef8d05a82db0acb">sa_code_size</reimplementedby>
@@ -1160,12 +1164,14 @@
         <qualifiedname>faiss::Index::sa_encode</qualifiedname>
         <reimplementedby refid="structfaiss_1_1Index2Layer_1a205db18d83af2fc98faab3f0066e8c9f">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexAdditiveQuantizer_1a32fa884e35be46b3244b90012bdcc016">sa_encode</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexFastScan_1a57ce48e11490ead0689aee9df3a502be">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlat_1aaa95cb6086e2889e1c3f4478e454bc67">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVF_1a9d28b314ee008589eb41ce2823a088b6">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexLattice_1abbe02fd8270a854f7b25285d9a0a5752">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexLSH_1aac0eb8b22431e490a28fdc566a461af5">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPQ_1a438591a838aad52cd69e021c7b93110f">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a5fc4aff1479e447435e1f08b2a88d1d6">sa_encode</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexRaBitQ_1afbcc303ffecc074f1665af171f692054">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRefine_1a8f7cc71fbded7eaf35bcccf41603085d">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRowwiseMinMaxFP16_1a7f4963d9ea750a494151478fc56df10a">sa_encode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRowwiseMinMax_1ab2dfc5e5adcbfa9fcf5ecd30ddd407a8">sa_encode</reimplementedby>
@@ -1228,15 +1234,16 @@
         <reimplementedby refid="structfaiss_1_1IndexAdditiveQuantizer_1af849220ce067392a737dcbca233326ad">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexAdditiveQuantizerFastScan_1a3b295457588bd7f11782f84683eaff8d">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexFlat_1af84e108340092e5d3970ab8824a71658">sa_decode</reimplementedby>
-        <reimplementedby refid="structfaiss_1_1IndexIVFAdditiveQuantizerFastScan_1a71dcc40c559af0fa5040b0e457ca3b44">sa_decode</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexIVFFastScan_1a0f23ffc33cf0de396080f9c07888f9ca">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVFFlat_1a1464960b17488f8ee8ae600c07f7b72c">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexIVFPQ_1adb7494c07ce7812226ad41c8b6dca992">sa_decode</reimplementedby>
-        <reimplementedby refid="structfaiss_1_1IndexIVFPQFastScan_1acc76166d19edf5e34a36f352cf9c02cd">sa_decode</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexIVFRaBitQ_1a79ceddd914b81c8fa67c6d27e4a3dc12">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexLattice_1a3fd27c778f435412336110785ba7124d">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexLSH_1ac1eaeea883e641e50c5b770fb02edc25">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPQ_1a104104a52149ebdcb8ab79dc01180b6e">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPQFastScan_1afe1ce4711953b8a679f83210fee8a30b">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexPreTransform_1a544759849772119156adf601287e50b0">sa_decode</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexRaBitQ_1a65ebc38abdff6a6fd9df63fecc775fa9">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRefine_1acff97ef10e27f43dc72f5faa21c67a4e">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRowwiseMinMaxFP16_1a9844bbc4ea9311674b0921108988222d">sa_decode</reimplementedby>
         <reimplementedby refid="structfaiss_1_1IndexRowwiseMinMax_1ab04e9ffc561f4de77af64d9ab122d58f">sa_decode</reimplementedby>
@@ -1343,6 +1350,53 @@
         </inbodydescription>
         <location file="faiss/Index.h" line="309" column="18"/>
       </memberdef>
+      <memberdef kind="function" id="structfaiss_1_1Index_1aaaec1fac2c4ef7bf6e2b180fe4efbe6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void faiss::Index::add_sa_codes</definition>
+        <argsstring>(idx_t n, const uint8_t *codes, const idx_t *xids)</argsstring>
+        <name>add_sa_codes</name>
+        <qualifiedname>faiss::Index::add_sa_codes</qualifiedname>
+        <reimplementedby refid="structfaiss_1_1IndexIVF_1a23981fa9b4a027d8a43da073d9d2c685">add_sa_codes</reimplementedby>
+        <reimplementedby refid="structfaiss_1_1IndexFlatCodes_1ad30841b719b3c4949f0ac5f656e28ee2">add_sa_codes</reimplementedby>
+        <param>
+          <type><ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref></type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>codes</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacefaiss_1ad63e84aa82f5bb0405ed924d58b20e2e" kindref="member">idx_t</ref> *</type>
+          <declname>xids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add vectors that are computed with the standalone codec</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>codes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>codes to add size n * <ref refid="structfaiss_1_1Index_1a5a050b805d4836afdf8f09251ad8b415" kindref="member">sa_code_size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>corresponding ids, size n </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="faiss/Index.h" line="316" column="18"/>
+      </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
       <memberdef kind="typedef" id="structfaiss_1_1Index_1af317cb1e2ad0bd145f716f2243b693eb" prot="public" static="no">
@@ -1441,6 +1495,7 @@
     <location file="faiss/IndexNSG.h" line="26" column="1" bodyfile="faiss/IndexNSG.h" bodystart="26" bodyend="77"/>
     <listofallmembers>
       <member refid="structfaiss_1_1IndexNSG_1a9fc38a1c373f96d845364143ff933207" prot="public" virt="virtual"><scope>faiss::IndexNSG</scope><name>add</name></member>
+      <member refid="structfaiss_1_1Index_1aaaec1fac2c4ef7bf6e2b180fe4efbe6b" prot="public" virt="virtual"><scope>faiss::IndexNSG</scope><name>add_sa_codes</name></member>
       <member refid="structfaiss_1_1Index_1a13b30ab195baded94b6db98d8e111ed7" prot="public" virt="virtual"><scope>faiss::IndexNSG</scope><name>add_with_ids</name></member>
       <member refid="structfaiss_1_1Index_1a010ae05c4ba70d309f9821d9b03182aa" prot="public" virt="virtual"><scope>faiss::IndexNSG</scope><name>assign</name></member>
       <member refid="structfaiss_1_1IndexNSG_1a5f8d4dc0ef239c5d6d29252c728dd9fa" prot="public" virt="non-virtual"><scope>faiss::IndexNSG</scope><name>build</name></member>
